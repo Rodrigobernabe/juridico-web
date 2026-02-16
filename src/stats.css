@@ -1,0 +1,63 @@
+/* Stats Bar */
+.stats-bar {
+    background-color: var(--color-oxford-blue);
+    color: var(--color-gold);
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--spacing-md);
+}
+
+.stat-number {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: var(--color-ghost-white);
+    /* Number in white for contrast */
+}
+
+/* Add a plus sign/suffix via CSS if needed, or in HTML */
+/* Add a plus sign/suffix via CSS if needed, or in HTML */
+.stat-number::after {
+    /* content: '+'; handled in HTML mostly */
+    content: '';
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    opacity: 0.9;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: none;
+    /* Hide on mobile, show on desktop */
+}
+
+@media (min-width: 768px) {
+    .stat-divider {
+        display: block;
+    }
+}
